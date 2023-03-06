@@ -1,8 +1,8 @@
 /*
  * Diego Soto (22737)
  * Algoritmos y Estructuras de Datos Sección 40
- * Hoja de Trabajo 4
- * 20-02-2023
+ * Hoja de Trabajo 6
+ * 6-03-2023
  */
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -105,14 +105,24 @@ public class Principal{
                         System.out.println(tienda.mosCole(utilizar));
                         break;
 
+                        case 4: 
+                        System.out.println(tienda.mosColeOr(utilizar));
+                        break;                        
+
                         case 5:
                         System.out.println(tienda.mosPro(utilizar));
+                        break;
 
                         case 6: 
                         System.out.println(tienda.mosProOr(utilizar));
+                        break;
 
                         case 7:
                         salir = true;
+                        break;
+
+                        default:
+                        System.out.println("Ingrese una opcion valida");
                         break;
                     }
                 }
@@ -184,14 +194,24 @@ public class Principal{
                         System.out.println(tienda.mosCole(utilizar1));
                         break;
 
+                        case 4: 
+                        System.out.println(tienda.mosColeOr(utilizar1));
+                        break;
+
                         case 5:
                         System.out.println(tienda.mosPro(utilizar1));
+                        break;
 
                         case 6: 
                         System.out.println(tienda.mosProOr(utilizar1));
+                        break;
 
                         case 7:
                         salir = true;
+                        break;
+
+                        default:
+                        System.out.println("Ingrese una opcion valida");
                         break;
                     }
                 }
@@ -263,20 +283,31 @@ public class Principal{
                         System.out.println(tienda.mosCole(utilizar2));
                         break;
 
+                        case 4: 
+                        System.out.println(tienda.mosColeOr(utilizar2));
+                        break;
+
                         case 5:
                         System.out.println(tienda.mosPro(utilizar2));
+                        break;
 
                         case 6: 
                         System.out.println(tienda.mosProOr(utilizar2));
+                        break;
 
                         case 7:
                         salir = true;
+                        break;
+
+                        default:
+                        System.out.println("Ingrese una opcion valida");
                         break;
                     }
                 }
                 break;
 
                 default:
+                System.out.println("Ingrese una opcion valida");
                 break;
 
             }
