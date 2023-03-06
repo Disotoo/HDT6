@@ -23,6 +23,13 @@ public class Principal{
         ArrayList<String> lineasProductos = archivo.leerArchivo();
         
         FactoryHashmap respuesta = new FactoryHashmap();
+        ArrayList<String> listaInte1 = new ArrayList<String>();
+        ArrayList<String> listaInte2 = new ArrayList<String>();
+        ArrayList<String> listaInte3 = new ArrayList<String>();
+        ArrayList<String> listaInte4 = new ArrayList<String>();
+        ArrayList<String> listaInte5 = new ArrayList<String>();
+        ArrayList<String> listaInte6 = new ArrayList<String>();
+        ArrayList<String> listaInte7 = new ArrayList<String>();
 
 
         try{
@@ -33,13 +40,6 @@ public class Principal{
             switch(tipo){
                 case 1: 
                 Map<String, ArrayList<String>> utilizar = respuesta.getInstance(tipo);
-                ArrayList<String> listaInte1 = new ArrayList<String>();
-                ArrayList<String> listaInte2 = new ArrayList<String>();
-                ArrayList<String> listaInte3 = new ArrayList<String>();
-                ArrayList<String> listaInte4 = new ArrayList<String>();
-                ArrayList<String> listaInte5 = new ArrayList<String>();
-                ArrayList<String> listaInte6 = new ArrayList<String>();
-                ArrayList<String> listaInte7 = new ArrayList<String>();
                 for (String fila : lineasProductos) {
                     ArrayList<String> oneLine = new ArrayList<String>();
                     String [] lineaSeparada = fila.split("\\|");
@@ -81,6 +81,97 @@ public class Principal{
                     
                 }
                 break;
+                
+                case 2: 
+                Map<String, ArrayList<String>> utilizar1 = respuesta.getInstance(tipo);
+                for (String fila : lineasProductos) {
+                    ArrayList<String> oneLine = new ArrayList<String>();
+                    String [] lineaSeparada = fila.split("\\|");
+                    for (String caracter : lineaSeparada) {
+                        oneLine.add(caracter);
+                    }
+                    String llave = oneLine.get(0);
+                    llave = llave.trim();
+                    String valor = oneLine.get(1);
+                    valor = valor.trim();
+                    if(llave.equals("Mueble de terraza")){
+                        listaInte1.add(valor);
+                        utilizar1.put(llave, listaInte1);
+                    }
+                    else if(llave.equals("Sillones de masaje")){
+                        listaInte2.add(valor);
+                        utilizar1.put(llave, listaInte2);
+                    }
+                    else if(llave.equals("Bebidas")){
+                        listaInte3.add(valor);
+                        utilizar1.put(llave, listaInte3);
+                    }
+                    else if(llave.equals("Condimentos")){
+                        listaInte4.add(valor);
+                        utilizar1.put(llave, listaInte4);
+                    }
+                    else if(llave.equals("Frutas")){
+                        listaInte5.add(valor);
+                        utilizar1.put(llave, listaInte5);
+                    }
+                    else if(llave.equals("Carnes")){
+                        listaInte6.add(valor);
+                        utilizar1.put(llave, listaInte6);
+                    }
+                    else if(llave.equals("Lácteos")){
+                        listaInte7.add(valor);
+                        utilizar1.put(llave, listaInte7);
+                    }
+                    
+                }
+                break;
+
+                case 3: 
+                Map<String, ArrayList<String>> utilizar2 = respuesta.getInstance(tipo);
+                for (String fila : lineasProductos) {
+                    ArrayList<String> oneLine = new ArrayList<String>();
+                    String [] lineaSeparada = fila.split("\\|");
+                    for (String caracter : lineaSeparada) {
+                        oneLine.add(caracter);
+                    }
+                    String llave = oneLine.get(0);
+                    llave = llave.trim();
+                    String valor = oneLine.get(1);
+                    valor = valor.trim();
+                    if(llave.equals("Mueble de terraza")){
+                        listaInte1.add(valor);
+                        utilizar2.put(llave, listaInte1);
+                    }
+                    else if(llave.equals("Sillones de masaje")){
+                        listaInte2.add(valor);
+                        utilizar2.put(llave, listaInte2);
+                    }
+                    else if(llave.equals("Bebidas")){
+                        listaInte3.add(valor);
+                        utilizar2.put(llave, listaInte3);
+                    }
+                    else if(llave.equals("Condimentos")){
+                        listaInte4.add(valor);
+                        utilizar2.put(llave, listaInte4);
+                    }
+                    else if(llave.equals("Frutas")){
+                        listaInte5.add(valor);
+                        utilizar2.put(llave, listaInte5);
+                    }
+                    else if(llave.equals("Carnes")){
+                        listaInte6.add(valor);
+                        utilizar2.put(llave, listaInte6);
+                    }
+                    else if(llave.equals("Lácteos")){
+                        listaInte7.add(valor);
+                        utilizar2.put(llave, listaInte7);
+                    }
+                    
+                }
+                break;
+
+                default:
+                break;
 
             }
 
@@ -88,6 +179,8 @@ public class Principal{
             teclado.nextLine();
             System.out.println("Ingreso algo incorrecto");
         }
+
+
 
 
 
