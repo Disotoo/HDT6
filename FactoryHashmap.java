@@ -3,6 +3,15 @@ import java.util.*;
 public class FactoryHashmap {
     Map<String, ArrayList<String>> hash;
 
+    public Map<String,ArrayList<String>> getHash() {
+        return this.hash;
+    }
+
+    public void setHash(Map<String,ArrayList<String>> hash) {
+        this.hash = hash;
+    }
+
+
     public Map<String, ArrayList<String>> getInstance(int tipo){
 
     
