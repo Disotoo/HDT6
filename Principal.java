@@ -21,6 +21,7 @@ public class Principal{
 
         Archivo archivo = new Archivo("./inventario.txt");
         ArrayList<String> lineasProductos = archivo.leerArchivo();
+        Hashmap tienda = new Hashmap();
         
         FactoryHashmap respuesta = new FactoryHashmap();
         ArrayList<String> listaInte1 = new ArrayList<String>();
@@ -36,6 +37,7 @@ public class Principal{
             System.out.println("Que tipo de Hashmap quiere usar: \n1. HashMap \n2.LinkedHashMap \n3.TreeMap");
             int tipo = teclado.nextInt();
             teclado.nextLine();
+            boolean salir = false;
 
             switch(tipo){
                 case 1: 
@@ -78,7 +80,41 @@ public class Principal{
                         listaInte7.add(valor);
                         utilizar.put(llave, listaInte7);
                     }
-                    
+                }
+                while(salir == false){
+                    System.out.println("\nFunciones: \n1. Agregar producto \n2. Mostrar categoria del producto \n3. Mostrar datos del producto \n4. Mostrar productos ordenados \n5. Mostrar inventario \n6. Mostrar inventario existente \n7. Salir\n");
+                    int opcion = teclado.nextInt();
+                    teclado.nextLine();
+                    switch(opcion){
+                        case 1: 
+                        System.out.println("Nombre del producto: ");
+                        String producto = teclado.nextLine();
+                        System.out.println("Nombre de la categoria: ");
+                        String categoria = teclado.nextLine();
+                        tienda.agregarColeccion(categoria, producto);
+                        break;
+
+                        case 2: 
+                        System.out.println("Nombre del producto: ");
+                        String producto1 = teclado.nextLine();
+                        System.out.println("\nCategoria del producto: ");
+                        System.out.println(tienda.mosCate(producto1, utilizar));
+                        break;
+
+                        case 3: 
+                        System.out.println(tienda.mosCole(utilizar));
+                        break;
+
+                        case 5:
+                        System.out.println(tienda.mosPro(utilizar));
+
+                        case 6: 
+                        System.out.println(tienda.mosProOr(utilizar));
+
+                        case 7:
+                        salir = true;
+                        break;
+                    }
                 }
                 break;
                 
@@ -124,6 +160,41 @@ public class Principal{
                     }
                     
                 }
+                while(salir == false){
+                    System.out.println("\nFunciones: \n1. Agregar producto \n2. Mostrar categoria del producto \n3. Mostrar datos del producto \n4. Mostrar productos ordenados \n5. Mostrar inventario \n6. Mostrar inventario existente \n7. Salir\n");
+                    int opcion = teclado.nextInt();
+                    teclado.nextLine();
+                    switch(opcion){
+                        case 1: 
+                        System.out.println("Nombre del producto: ");
+                        String producto = teclado.nextLine();
+                        System.out.println("Nombre de la categoria: ");
+                        String categoria = teclado.nextLine();
+                        tienda.agregarColeccion(categoria, producto);
+                        break;
+
+                        case 2: 
+                        System.out.println("Nombre del producto: ");
+                        String producto1 = teclado.nextLine();
+                        System.out.println("\nCategoria del producto: ");
+                        System.out.println(tienda.mosCate(producto1, utilizar1));
+                        break;
+
+                        case 3: 
+                        System.out.println(tienda.mosCole(utilizar1));
+                        break;
+
+                        case 5:
+                        System.out.println(tienda.mosPro(utilizar1));
+
+                        case 6: 
+                        System.out.println(tienda.mosProOr(utilizar1));
+
+                        case 7:
+                        salir = true;
+                        break;
+                    }
+                }
                 break;
 
                 case 3: 
@@ -168,6 +239,41 @@ public class Principal{
                     }
                     
                 }
+                while(salir == false){
+                    System.out.println("\nFunciones: \n1. Agregar producto \n2. Mostrar categoria del producto \n3. Mostrar datos del producto \n4. Mostrar productos ordenados \n5. Mostrar inventario \n6. Mostrar inventario existente \n7. Salir\n");
+                    int opcion = teclado.nextInt();
+                    teclado.nextLine();
+                    switch(opcion){
+                        case 1: 
+                        System.out.println("Nombre del producto: ");
+                        String producto = teclado.nextLine();
+                        System.out.println("Nombre de la categoria: ");
+                        String categoria = teclado.nextLine();
+                        tienda.agregarColeccion(categoria, producto);
+                        break;
+
+                        case 2: 
+                        System.out.println("Nombre del producto: ");
+                        String producto1 = teclado.nextLine();
+                        System.out.println("\nCategoria del producto: ");
+                        System.out.println(tienda.mosCate(producto1, utilizar2));
+                        break;
+
+                        case 3: 
+                        System.out.println(tienda.mosCole(utilizar2));
+                        break;
+
+                        case 5:
+                        System.out.println(tienda.mosPro(utilizar2));
+
+                        case 6: 
+                        System.out.println(tienda.mosProOr(utilizar2));
+
+                        case 7:
+                        salir = true;
+                        break;
+                    }
+                }
                 break;
 
                 default:
@@ -179,19 +285,6 @@ public class Principal{
             teclado.nextLine();
             System.out.println("Ingreso algo incorrecto");
         }
-
-
-
-
-
-
-
-        //String prueba = oneLine.get(1);
-        //prueba = prueba.trim();
-
-        //System.out.println(oneLine.get(0));
-        //System.out.println(prueba);
-
         
     }
 }
